@@ -65,7 +65,7 @@ Creating a flow diagram in text form can be challenging due to its visual nature
 2.	**Create a UML class diagram for the Staff class.**
 
  
-
+![](001.png)
 
 **Code/Implementation: **
 
