@@ -1,6 +1,8 @@
 # java_SQL
 
-# Managing a staff database, allowing admin to create, insert, update, and delete staff records
+#  SQL Server automation, allowing admin to create, insert, update, and delete staff records
+
+![](22.webp)
 
 ## Design
 **Technology used**
