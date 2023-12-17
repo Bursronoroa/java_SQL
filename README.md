@@ -3,8 +3,13 @@
 # Managing a staff database, allowing admin to create, insert, update, and delete staff records
 
 ## Design
+**Technology used**
+- MySQL Workbench
+- Eclipse Java
+- Microsoft visio
 
-**pseudocode to outline all steps in solving the problem**
+**Pseudocode to outline all steps in solving the problem**
+
 Creating a flow diagram in text form can be challenging due to its visual nature, but I can provide a simplified description of the flow in a text-based representation. You can use this as a basis to create a visual flowchart using a diagramming tool. Here's a textual representation:
 
 **Start:**
@@ -65,27 +70,27 @@ Creating a flow diagram in text form can be challenging due to its visual nature
 2.	**Create a UML class diagram for the Staff class.**
 
  
-![](001.png)
+![](001.jpg)
 
 **Code/Implementation: **
 
 Copy and paste the entire contents of all code created here.
 
-package p4;
+      package p4;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Scanner;
+      import java.sql.Connection;
+      import java.sql.DriverManager;
+      import java.sql.PreparedStatement;
+      import java.sql.ResultSet;
+      import java.sql.SQLException;
+      import java.sql.Statement;
+      import java.util.Scanner;
 
-public class Main {
-    // SQL Queries
-    private static final String CREATE_TABLE_QUERY = "CREATE TABLE staff (id CHAR(9) PRIMARY KEY,"
-            + "\nlastName VARCHAR(15)," + "\nfirstName VARCHAR(15)," + "\nmi CHAR(1)," + "\nage INT," + "\naddress VARCHAR(20),"
-            + "\ncity VARCHAR(20)," + "\nstate VARCHAR(2)," + "\ntelephone CHAR(10)," + "\nemail VARCHAR(40)" + "\n);";
+      public class Main {
+          // SQL Queries
+          private static final String CREATE_TABLE_QUERY = "CREATE TABLE staff (id CHAR(9) PRIMARY KEY,"
+                  + "\nlastName VARCHAR(15)," + "\nfirstName VARCHAR(15)," + "\nmi CHAR(1)," + "\nage INT," + "\naddress VARCHAR(20),"
+                  + "\ncity VARCHAR(20)," + "\nstate VARCHAR(2)," + "\ntelephone CHAR(10)," + "\nemail VARCHAR(40)" + "\n);";
 
     private static final String SELECT_QUERY = "SELECT * FROM staff WHERE id=?";
     private static final String INSERT_QUERY = "INSERT INTO staff (id, lastName, firstName, mi, age, address, city, state, telephone, email) VALUES (?,?,?,?,?,?,?,?,?,?)";
@@ -100,7 +105,7 @@ public class Main {
         if (con == null) {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/p2", "root", "2014");
+                con = DriverManager.getConnection("jdbc:mysql://localhost/p2", "root", "password");
                 System.out.println("Success");
             } catch (ClassNotFoundException | SQLException ex) {
                 ex.printStackTrace();
@@ -215,58 +220,44 @@ public class Main {
     }
 
 
-**Testing: **
+**Testing:**
 
 Include screenshots to show the operation of each of the menu options.
 
-Before creating table: staff
+**Before creating table: staff**
+MySQL page before running the program
 
- 
+![](2.jpg)
 
+**Create table**:
 
+![](3.jpg)
 
+![](4.jpg)
 
+**Insert values**:
 
+ ![](5.jpg)
 
-
-
-
-
-
-
-
-
-
+![](6.jpg)
 
 
+**Select**:
 
-Create table
+![](7.jpg)
 
- 
+![](8.jpg)
 
- 
+**Delete**:
 
-Insert values
+![](9.jpg)
 
- 
+![](10.jpg)
 
- 
+**Exception when State does not conform with two-character limit**:
 
-Select
+ ![](11.jpg)
 
- 
+**Exception when Mi(middle initials) does not conform with one-character limit:**:
 
- 
-
-Delete
-
- 
-
- 
-
-Exception when State does not conform with two-character limit:
-
- 
-
-Exception when Mi does not conform with one-character limit:
- 
+ ![](12.jpg)
