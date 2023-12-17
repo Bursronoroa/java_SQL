@@ -72,9 +72,9 @@ Creating a flow diagram in text form can be challenging due to its visual nature
 2.	**Create a UML class diagram for the Staff class.**
 
  
-![](001.jpg)
+![](1.jpg)
 
-**Code/Implementation: **
+**Code/Implementation:**
 
 Copy and paste the entire contents of all code created here.
 
@@ -222,11 +222,12 @@ Copy and paste the entire contents of all code created here.
     }
 
 
-**Testing:**
+**Testing**
 
 Include screenshots to show the operation of each of the menu options.
 
 **Before creating table: staff**
+
 MySQL page before running the program
 
 ![](2.jpg)
